@@ -1,0 +1,86 @@
+{
+  "x-generator": "NSwag v13.20.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "API SME GDX",
+    "description": "API documentation using Swagger 2.0",
+    "version": "v1"
+  },
+  "consumes": [
+    "application/json-patch+json",
+    "application/json",
+    "text/json",
+    "application/*+json"
+  ],
+  "paths": {
+    "/api/SYS-GDX/JuristicPerson/batch": {
+      "post": {
+        "tags": [
+          "GDX"
+        ],
+        "operationId": "GDX_batchgetdimenson",
+        "parameters": [
+          {
+            "name": "models",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SearchMOrganizationJuristicPersonModels"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/api/SYS-GDX/JuristicPerson": {
+      "post": {
+        "tags": [
+          "GDX"
+        ],
+        "operationId": "GDX_GetAllAsyncSearch_JuristicPerson",
+        "parameters": [
+          {
+            "name": "xmodel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SearchMOrganizationJuristicPersonModels"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "SearchMOrganizationJuristicPersonModels": {
+      "type": "object",
+      "required": [
+        "OrganizationJuristicID"
+      ],
+      "properties": {
+        "OrganizationJuristicID": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

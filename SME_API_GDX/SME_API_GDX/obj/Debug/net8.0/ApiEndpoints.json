@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "SME_API_GDX.Controllers.GDXController",
+    "Method": "GetAllAsyncSearch_JuristicPerson",
+    "RelativePath": "api/SYS-GDX/JuristicPerson",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "xmodel",
+        "Type": "searchMOrganizationJuristicPersonModels",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SME_API_GDX.Controllers.GDXController",
+    "Method": "batchgetdimenson",
+    "RelativePath": "api/SYS-GDX/JuristicPerson/batch",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "models",
+        "Type": "searchMOrganizationJuristicPersonModels",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

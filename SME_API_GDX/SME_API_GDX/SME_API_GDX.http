@@ -1,0 +1,6 @@
+@SME_API_GDX_HostAddress = http://localhost:5074
+
+GET {{SME_API_GDX_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

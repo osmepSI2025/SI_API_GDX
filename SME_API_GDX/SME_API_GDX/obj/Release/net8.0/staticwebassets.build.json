@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "iWhl/MIvOqLcIWFbkj6tnH6INRsLdQGPPAqUkXLZddk=",
+  "Source": "SME_API_GDX",
+  "BasePath": "_content/SME_API_GDX",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

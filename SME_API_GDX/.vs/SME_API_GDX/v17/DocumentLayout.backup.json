@@ -1,0 +1,269 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\responsitory\\morganizationjuristicpersonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\responsitory\\morganizationjuristicpersonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\controllers\\gdxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\controllers\\gdxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\service\\morganizationjuristicpersonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\service\\morganizationjuristicpersonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\service\\callapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\service\\callapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\models\\juristicpersonapiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\models\\juristicpersonapiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\mocdata\\juristic-person.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\mocdata\\juristic-person.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\models\\errorlogmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\models\\errorlogmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\responsitory\\apiinformationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\responsitory\\apiinformationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\entities\\gdxdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\entities\\gdxdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\service\\icallapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\service\\icallapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\entities\\morganizationjuristicperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\entities\\morganizationjuristicperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Models\\OrganizationJuristicPersonDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SME_API_GDX\\Models\\OrganizationJuristicPersonDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|d:\\git_project\\sme_apimanagement\\sme_api_gdx\\sme_api_gdx\\sme_api_gdx\\responsitory\\iapiinformationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775B692-DA7A-4ED6-BB1D-D0E9B00B7148}|SME_API_GDX\\SME_API_GDX.csproj|solutionrelative:sme_api_gdx\\responsitory\\iapiinformationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Program.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Program.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Program.cs",
+              "RelativeToolTip": "SME_API_GDX\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T07:57:32.896Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\appsettings.json",
+              "RelativeDocumentMoniker": "SME_API_GDX\\appsettings.json",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\appsettings.json",
+              "RelativeToolTip": "SME_API_GDX\\appsettings.json",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-17T07:59:28.417Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JuristicPersonApiResponse.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Models\\JuristicPersonApiResponse.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Models\\JuristicPersonApiResponse.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Models\\JuristicPersonApiResponse.cs",
+              "RelativeToolTip": "SME_API_GDX\\Models\\JuristicPersonApiResponse.cs",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAYwNsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T04:13:14.852Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Juristic-Person.json",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\MocData\\Juristic-Person.json",
+              "RelativeDocumentMoniker": "SME_API_GDX\\MocData\\Juristic-Person.json",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\MocData\\Juristic-Person.json",
+              "RelativeToolTip": "SME_API_GDX\\MocData\\Juristic-Person.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-17T08:48:55.353Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GDXController.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Controllers\\GDXController.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Controllers\\GDXController.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Controllers\\GDXController.cs",
+              "RelativeToolTip": "SME_API_GDX\\Controllers\\GDXController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T08:07:19.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MOrganizationJuristicPersonRepository.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Responsitory\\MOrganizationJuristicPersonRepository.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Responsitory\\MOrganizationJuristicPersonRepository.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Responsitory\\MOrganizationJuristicPersonRepository.cs",
+              "RelativeToolTip": "SME_API_GDX\\Responsitory\\MOrganizationJuristicPersonRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T04:04:28.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MOrganizationJuristicPersonService.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Service\\MOrganizationJuristicPersonService.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Service\\MOrganizationJuristicPersonService.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Service\\MOrganizationJuristicPersonService.cs",
+              "RelativeToolTip": "SME_API_GDX\\Service\\MOrganizationJuristicPersonService.cs",
+              "ViewState": "AgIAAMoBAAAAAAAAAAAowNYBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T04:05:13.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CallAPIService.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Service\\CallAPIService.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Service\\CallAPIService.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Service\\CallAPIService.cs",
+              "RelativeToolTip": "SME_API_GDX\\Service\\CallAPIService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T08:10:26.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ErrorLogModels.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Models\\ErrorLogModels.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Models\\ErrorLogModels.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Models\\ErrorLogModels.cs",
+              "RelativeToolTip": "SME_API_GDX\\Models\\ErrorLogModels.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAwwCIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T10:35:00.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApiInformationRepository.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Responsitory\\ApiInformationRepository.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Responsitory\\ApiInformationRepository.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Responsitory\\ApiInformationRepository.cs",
+              "RelativeToolTip": "SME_API_GDX\\Responsitory\\ApiInformationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T04:07:08.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GDXDBContext.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Entities\\GDXDBContext.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Entities\\GDXDBContext.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Entities\\GDXDBContext.cs",
+              "RelativeToolTip": "SME_API_GDX\\Entities\\GDXDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T09:28:42.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ICallAPIService.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Service\\ICallAPIService.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Service\\ICallAPIService.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Service\\ICallAPIService.cs",
+              "RelativeToolTip": "SME_API_GDX\\Service\\ICallAPIService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T08:10:38.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MOrganizationJuristicPerson.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Entities\\MOrganizationJuristicPerson.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Entities\\MOrganizationJuristicPerson.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Entities\\MOrganizationJuristicPerson.cs",
+              "RelativeToolTip": "SME_API_GDX\\Entities\\MOrganizationJuristicPerson.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T08:45:55.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OrganizationJuristicPersonDto.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Models\\OrganizationJuristicPersonDto.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Models\\OrganizationJuristicPersonDto.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Models\\OrganizationJuristicPersonDto.cs",
+              "RelativeToolTip": "SME_API_GDX\\Models\\OrganizationJuristicPersonDto.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAswNcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T04:08:41.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IApiInformationRepository.cs",
+              "DocumentMoniker": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Responsitory\\IApiInformationRepository.cs",
+              "RelativeDocumentMoniker": "SME_API_GDX\\Responsitory\\IApiInformationRepository.cs",
+              "ToolTip": "D:\\Git_project\\SME_APIManagement\\SME_API_GDX\\SME_API_GDX\\SME_API_GDX\\Responsitory\\IApiInformationRepository.cs",
+              "RelativeToolTip": "SME_API_GDX\\Responsitory\\IApiInformationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T08:10:03.863Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

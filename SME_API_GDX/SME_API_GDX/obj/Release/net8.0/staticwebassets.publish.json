@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "l+yOYAU6Xm7YiJaM4Ytd17jKmmcUlk5KlUQdJhNTti8=",
+  "Source": "SME_API_GDX",
+  "BasePath": "_content/SME_API_GDX",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,92 @@
+{
+  "status": {
+    "code": "1000",
+    "description": "Success"
+  },
+  "data": {
+    "cd:OrganizationJuristicPerson": {
+      "cd:OrganizationJuristicID": "09XXXXXXXXXXX",
+      "cd:OrganizationOldJuristicID": "009XXXXXXXXXXX",
+      "cd:OrganizationJuristicNameTH": "บริษัท แซนด์บ็อกซ์ 06 จำกัด palmmy little mermaid",
+      "cd:OrganizationJuristicNameEN": "SANDBOX 06 CO., LTD.",
+      "cd:OrganizationJuristicType": "บริษัทจำกัด",
+      "cd:OrganizationJuristicRegisterDate": "20140510",
+      "cd:OrganizationJuristicStatus": "ยังดำเนินกิจการอยู่",
+      "cd:OrganizationJuristicObjective": [
+        {
+          "td:JuristicObjective": "R",
+          "td:JuristicObjectiveCode": "68102",
+          "td:JuristicObjectiveTextTH": "การซื้อและการขายอสังหาริมทรัพย์ที่เป็นของตนเองที่ไม่ใช่ เพื่อเป็นที่พักอาศัย",
+          "td:JuristicObjectiveTextEN": "Buying and selling of on own account of non-residential buildings"
+        },
+        {
+          "td:JuristicObjective": "F",
+          "td:JuristicObjectiveCode": "55101",
+          "td:JuristicObjectiveTextTH": "โรงแรม รีสอร์ทและห้องชุด",
+          "td:JuristicObjectiveTextEN": "Hotels and resort hotels"
+        }
+      ],
+      "cd:OrganizationJuristicObjectiveItems": "21",
+      "cd:OrganizationJuristicObjectivePages": "1",
+      "cd:OrganizationJuristicRegisterCapital": "1000000.00",
+      "cd:OrganizationJuristicPaidUpCapital": null,
+      "cd:OrganizationJuristicPersonList": [
+        {
+          "td:JuristicPersonSequence": 1,
+          "td:JuristicPersonType": "กรรมการ",
+          "td:JuristicPerson": {
+            "cd:PersonNameTH": {
+              "cd:PersonNameTitleTextTH": "นาย",
+              "cd:PersonFirstNameTH": "ทดลอง",
+              "cd:PersonMiddleNameTH": "",
+              "cd:PersonLastNameTH": "สมมติ"
+            }
+          },
+          "td:JuristicPersonInvestType": "",
+          "td:JuristicPersonInvestAmount": ""
+        }
+      ],
+      "cd:OrganizationJuristicBranchName": "สำนักงานใหญ่",
+      "cd:OrganizationJuristicAddress": {
+        "cr:AddressType": {
+          "cd:Address": "6/7 ถนนสนุกสนาน",
+          "cd:Building": "",
+          "cd:RoomNo": "",
+          "cd:Floor": "",
+          "cd:AddressNo": "6/7",
+          "cd:Moo": "",
+          "cd:Yaek": "",
+          "cd:Soi": null,
+          "cd:Trok": "",
+          "cd:Village": "",
+          "cd:Road": "สนุกสนาน",
+          "cd:CitySubDivision": {
+            "cr:CitySubDivisionCode": "10060100",
+            "cr:CitySubDivisionTextTH": "คลองจั่น"
+          },
+          "cd:City": {
+            "cr:CityCode": "1006",
+            "cr:CityTextTH": "เขตบางกะปิ"
+          },
+          "cd:CountrySubDivision": {
+            "cr:CountrySubDivisionCode": "TH-10",
+            "cr:CountrySubDivisionTextTH": "กรุงเทพมหานคร"
+          }
+        }
+      },
+      "cd:OrganizationJuristicPersonDescription": [
+        {
+          "cd:OrganizationJuristicPersonDescriptionSequence": 1,
+          "cd:OrganizationJuristicPersonDescriptionType": "อำนาจกรรมการ",
+          "cd:OrganizationJuristicPersonDescriptionDetail": "นายทดลอง สมมติ ลงลายมือชื่อและประทับตราสำคัญของบริษัท"
+        },
+        {
+          "cd:OrganizationJuristicPersonDescriptionSequence": 2,
+          "cd:OrganizationJuristicPersonDescriptionType": "รายการอื่นซึ่งเห็นสมควรจะให้ประชาชนทราบ",
+          "cd:OrganizationJuristicPersonDescriptionDetail": "ไม่มี"
+        }
+      ],
+      "td:DigitalIDFlag": "N"
+    }
+  }
+}
