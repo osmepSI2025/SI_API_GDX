@@ -1,4 +1,4 @@
-public class Status
+﻿public class Status
 {
     public string code { get; set; }
     public string description { get; set; }
@@ -7,13 +7,22 @@ public class Status
 public class JuristicPersonApiResponse
 {
     public Status status { get; set; }
-    public JuristicPersonData data { get; set; }
+    public List<OrganizationJuristicPersonWrapper> data { get; set; }
 }
-
+// Add this class definition to resolve the missing type
+public class OrganizationJuristicPersonWrapper
+{
+    public OrganizationJuristicPersonDto OrganizationJuristicPerson { get; set; }
+}
 public class JuristicPersonData
 {
+    // สำหรับกรณีคืนค่ารายเดียว (เดิม)
     [Newtonsoft.Json.JsonProperty("cd:OrganizationJuristicPerson")]
     public OrganizationJuristicPersonDto OrganizationJuristicPerson { get; set; }
+
+    // สำหรับกรณีคืนค่าหลายรายการ (ใหม่)
+    [Newtonsoft.Json.JsonProperty("cd:OrganizationJuristicPersonList")]
+    public List<OrganizationJuristicPersonDto> OrganizationJuristicPersonList { get; set; }
 }
 
 public class OrganizationJuristicPersonDto

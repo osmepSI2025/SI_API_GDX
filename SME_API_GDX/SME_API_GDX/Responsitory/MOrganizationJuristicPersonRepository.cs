@@ -1,9 +1,5 @@
-using System;
-using SME_API_GDX.Entities;
-using System.Collections.Generic;
-using SME_API_GDX.Models;
-using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
+using SME_API_GDX.Entities;
 public class MOrganizationJuristicPersonRepository
 {
     private readonly GDXDBContext _context;
@@ -15,12 +11,16 @@ public class MOrganizationJuristicPersonRepository
 
     public async Task<IEnumerable<MOrganizationJuristicPerson>> GetAllAsync()
     {
-        return await _context.MOrganizationJuristicPeople.ToListAsync();
+        return await _context.MOrganizationJuristicPeople
+.Include(x => x.TJuristicObjectives)
+.Include(x => x.TJuristicPersonLists)
+.Include(x => x.TOrganizationJuristicAddresses)
+.Include(x => x.TOrganizationJuristicPersonDescriptions).ToListAsync();
     }
 
     public async Task<MOrganizationJuristicPerson?> GetByIdAsync(string id)
     {
-        try 
+        try
         {
             return await _context.MOrganizationJuristicPeople
        .Include(x => x.TJuristicObjectives)
@@ -28,12 +28,12 @@ public class MOrganizationJuristicPersonRepository
        .Include(x => x.TOrganizationJuristicAddresses)
        .Include(x => x.TOrganizationJuristicPersonDescriptions)
        .FirstOrDefaultAsync(x => x.OrganizationJuristicId == id);
-        } 
-        catch(Exception ex) 
-        { 
-        return new MOrganizationJuristicPerson(); // Return an empty object or handle as needed
         }
-       
+        catch (Exception ex)
+        {
+            return new MOrganizationJuristicPerson(); // Return an empty object or handle as needed
+        }
+
     }
 
     public async Task<bool> AddAsync(MOrganizationJuristicPerson entity)
