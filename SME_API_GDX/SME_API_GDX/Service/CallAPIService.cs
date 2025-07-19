@@ -89,7 +89,7 @@ namespace SME_API_GDX.Services
                     HttpMethod = apiModels.MethodType,
                     RequestData = requestJson,
                     InnerException = ex.InnerException?.ToString(),
-                    SystemCode = "SYS-BUDGET",
+                   SystemCode = Api_SysCode,
                     CreatedBy = "system"
                 };
                 await RecErrorLogApiAsync(apiModels, errorLog);
@@ -248,11 +248,16 @@ namespace SME_API_GDX.Services
                             Password = x.Password,
                             UpdateDate = x.UpdateDate,
                             Bearer = x.Bearer,
+                            AccessToken = x.AccessToken,
+                            ConsumerKey = x.ConsumerKey,
+                            ConsumerSecret = x.ConsumerSecret,
+                            AgentId = x.AgentId
                         }).FirstOrDefault(); // Use FirstOrDefault to handle empty lists
 
 
                         var result = await GetDataApiAsync_Login(apiParamx);
                         token = result;
+                      var sendReply =await  GetDataApiAsync( apiModels, xdata);
                     }
 
                     if (string.IsNullOrEmpty(token))
@@ -265,6 +270,14 @@ namespace SME_API_GDX.Services
                 else if (apiModels.AuthorizationType == "ApiKey")
                 {
                     request.Headers.Add("X-Api-Key", apiModels.ApiKey);
+                }
+                else if (apiModels.AuthorizationType == "Token")
+                {
+                    string strcuskey= DecodeBase64(apiModels.ConsumerKey);
+                   string strToken = DecodeBase64(apiModels.Token);
+
+                    request.Headers.Add("Consumer-Key", strcuskey);
+                    request.Headers.Add("Token", strToken);
                 }
                 else
                 {
@@ -292,39 +305,151 @@ namespace SME_API_GDX.Services
                 var content = await response.Content.ReadAsStringAsync();
                 var jsonNode = JsonNode.Parse(content);
 
-                ////test
-                //var filePath = Path.GetFullPath("MocData/M_RiskFactor-Data.json", AppContext.BaseDirectory);
-                //var jsonString = await File.ReadAllTextAsync(filePath);
-                //var jsonNode = JsonNode.Parse(jsonString);
-
-                //   var result = JsonSerializer.Deserialize<RiskFactorApiResponse>(jsonString, options);
-                // Deserialize and return
-                //   return jsonString;
+      
                 return jsonNode?.ToJsonString(new JsonSerializerOptions { WriteIndented = true }) ?? "{}";
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "Response status code does not indicate success: 401 (Unauthorized).")
+                {
+                    var LApi = await _repositoryApi.GetAllAsync(new MapiInformationModels { ServiceNameCode = "Refresh-Token" });
+
+                    var apiParamx = LApi.Select(x => new MapiInformationModels
+                    {
+                        ServiceNameCode = x.ServiceNameCode,
+                        ApiKey = x.ApiKey,
+                        AuthorizationType = x.AuthorizationType,
+                        ContentType = x.ContentType,
+                        CreateDate = x.CreateDate,
+                        Id = x.Id,
+                        MethodType = x.MethodType,
+                        ServiceNameTh = x.ServiceNameTh,
+                        Urldevelopment = x.Urldevelopment,
+                        Urlproduction = x.Urlproduction,
+                        Username = x.Username,
+                        Password = x.Password,
+                        UpdateDate = x.UpdateDate,
+                        Bearer = x.Bearer,
+                        AccessToken = x.AccessToken,
+                        ConsumerKey = x.ConsumerKey,
+                        ConsumerSecret = x.ConsumerSecret,
+                        AgentId = x.AgentId
+                    }).FirstOrDefault(); // Use FirstOrDefault to handle empty lists
+                                         // To do refresho token
+                    var getRefresh = await GetGDXRefreshtokenAsync_Login(apiParamx);
+
+                    return null; // หรือจัดการกับการรีเฟรชโทเคนตามที่คุณต้องการ
+                }
+                else 
+                {
+                    var errorLog = new ErrorLogModels
+                    {
+                        Message = "Function " + apiModels.ServiceNameTh + " " + ex.Message,
+                        StackTrace = ex.StackTrace,
+                        Source = ex.Source,
+                        TargetSite = ex.TargetSite?.ToString(),
+                        ErrorDate = DateTime.Now,
+                        UserName = apiModels.Username, // ดึงจาก context หรือ session
+                        Path = apiModels.Urlproduction,
+                        HttpMethod = apiModels.MethodType,
+                        RequestData = requestJson, // serialize เป็น JSON
+                        InnerException = ex.InnerException?.ToString(),
+                        SystemCode = Api_SysCode,
+
+                        CreatedBy = "system"
+        ,
+                        HttpCode = "401"
+                    };
+                    await RecErrorLogApiAsync(apiModels, errorLog);
+                    throw new Exception("Error in GetData: " + ex.Message + " | Inner Exception: " + ex.InnerException?.Message);
+                }
+
+            }
+        }
+        public async Task<string> GetGDXRefreshtokenAsync_Login(MapiInformationModels apiModels)
+        {
+            if (string.IsNullOrEmpty(apiModels.Urlproduction))
+                throw new ArgumentException("Urlproduction cannot be null or empty.");
+            if (string.IsNullOrEmpty(apiModels.ConsumerSecret) || string.IsNullOrEmpty(apiModels.AgentId))
+                throw new ArgumentException("ConsumerSecret and AgentId cannot be null or empty.");
+
+            string requestJson = "";
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+                WriteIndented = true
+            };
+            string customerKey = DecodeBase64(apiModels.ConsumerKey);
+            string agentId = DecodeBase64(apiModels.AgentId);
+            string consumerSecret = DecodeBase64(apiModels.ConsumerSecret);
+
+            string strUrl = string.IsNullOrEmpty(apiModels.Urlproduction)
+    ? throw new ArgumentNullException("Urlproduction is null")
+    : apiModels.Urlproduction.Replace("{ConsumerSecret}", consumerSecret).Replace("{AgentID}", agentId)
+            ;
+
+            try
+            {
+                using var request = new HttpRequestMessage(HttpMethod.Get, strUrl);
+
+                // Prepare the payload for the token request
+                request.Headers.Add("Consumer-Key", customerKey);
+                request.Content = new StringContent(requestJson, Encoding.UTF8, "application/json");
+
+                // Send the request using the existing _httpClient
+                var response = await _httpClient.SendAsync(request);
+
+                // Ensure the response is successful
+                response.EnsureSuccessStatusCode();
+
+                // Read the response content
+                var content = await response.Content.ReadAsStringAsync();
+
+                // Parse the JSON response to extract the token
+                using var doc = JsonDocument.Parse(content);
+                if (!doc.RootElement.TryGetProperty("Result", out var tokenElement))
+                    throw new Exception("Token not found in response");
+
+                // update token
+                var token = tokenElement.GetString();
+             await   _repositoryApi.UpdateGDXTokensAsync(token);
+
+                return tokenElement.GetString() ?? throw new Exception("Token is null or empty");
             }
             catch (Exception ex)
             {
                 var errorLog = new ErrorLogModels
                 {
-                    Message = "Function " + apiModels.ServiceNameTh + " " + ex.Message,
+                    Message = ex.Message,
                     StackTrace = ex.StackTrace,
                     Source = ex.Source,
                     TargetSite = ex.TargetSite?.ToString(),
                     ErrorDate = DateTime.Now,
-                    UserName = apiModels.Username, // ดึงจาก context หรือ session
+                    UserName = apiModels.Username,
                     Path = apiModels.Urlproduction,
                     HttpMethod = apiModels.MethodType,
-                    RequestData = requestJson, // serialize เป็น JSON
+                    RequestData = requestJson,
                     InnerException = ex.InnerException?.ToString(),
-                    SystemCode = Api_SysCode,
+                   SystemCode = Api_SysCode,
                     CreatedBy = "system"
-                    ,HttpCode = "401"
                 };
                 await RecErrorLogApiAsync(apiModels, errorLog);
-                throw new Exception("Error in GetData: " + ex.Message + " | Inner Exception: " + ex.InnerException?.Message);
+                throw new Exception("Error in GetDataApiAsync_Login: " + ex.Message, ex);
             }
         }
 
-        
+        public static string EncodeBase64(string plainText)
+        {
+            if (plainText == null) return string.Empty;
+            var plainBytes = Encoding.UTF8.GetBytes(plainText);
+            return Convert.ToBase64String(plainBytes);
+        }
+
+        public static string DecodeBase64(string base64Text)
+        {
+            if (string.IsNullOrEmpty(base64Text)) return string.Empty;
+            var base64Bytes = Convert.FromBase64String(base64Text);
+            return Encoding.UTF8.GetString(base64Bytes);
+        }
     }
 }

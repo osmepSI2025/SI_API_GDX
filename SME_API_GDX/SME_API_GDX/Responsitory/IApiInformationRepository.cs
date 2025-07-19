@@ -11,5 +11,6 @@ namespace SME_API_GDX.Repository
         Task UpdateAsync(MApiInformation service);
         Task DeleteAsync(int id);
         Task UpdateAllBearerTokensAsync(string newBearerToken);
+        Task UpdateGDXTokensAsync(string newBearerToken);
     }
 }

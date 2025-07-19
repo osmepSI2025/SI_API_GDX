@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SME_API_GDX.Entities;
 using SME_API_GDX.Models;
+using System.Text;
 
 namespace SME_API_GDX.Repository
 {
@@ -40,8 +41,27 @@ namespace SME_API_GDX.Repository
 
         public async Task UpdateAsync(MApiInformation service)
         {
-            _context.MApiInformations.Update(service);
-            await _context.SaveChangesAsync();
+            try
+            {
+                var todo = await _context.MApiInformations.FindAsync(service.Id);
+
+                if (todo == null)
+                {
+                    throw new Exception("Service not found.");
+                }
+  
+                if (service.Token != null) 
+                {
+                    todo.Token = service.Token;
+                }
+                  
+
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         public async Task DeleteAsync(int id)
@@ -76,5 +96,37 @@ namespace SME_API_GDX.Repository
                 throw new Exception("Error updating Bearer tokens: " + ex.Message, ex);
             }
         }
+
+        public async Task UpdateGDXTokensAsync(string newBearerToken)
+        {
+            try
+            {
+                // Retrieve all records from the repository
+                var allRecords = await GetAllAsync(new MapiInformationModels());
+
+                if (allRecords == null || !allRecords.Any())
+                    throw new Exception("No records found to update.");
+
+                // Update the Bearer field for each record
+                foreach (var record in allRecords.ToList())
+                {
+                    record.Token = EncodeBase64(newBearerToken);
+                    await UpdateAsync(record);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error updating Bearer tokens: " + ex.Message, ex);
+            }
+        }
+
+        private static string EncodeBase64(string plainText)
+        {
+            if (plainText == null) return string.Empty;
+            var plainBytes = Encoding.UTF8.GetBytes(plainText);
+            return Convert.ToBase64String(plainBytes);
+        }
+
     }
 }

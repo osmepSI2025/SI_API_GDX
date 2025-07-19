@@ -31,6 +31,14 @@ public partial class MApiInformation
 
     public string? MethodType { get; set; }
 
+    public string? ConsumerKey { get; set; }
+
+    public string? ConsumerSecret { get; set; }
+
+    public string? Token { get; set; }
+
+    public string? AgentId { get; set; }
+
     public DateTime? CreateDate { get; set; }
 
     public DateTime? UpdateDate { get; set; }

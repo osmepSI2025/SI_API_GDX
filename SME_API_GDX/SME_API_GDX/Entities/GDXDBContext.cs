@@ -31,17 +31,17 @@ public partial class GDXDBContext : DbContext
 
 //    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-//        => optionsBuilder.UseSqlServer("Server=27.254.173.62;Database=bluecarg_SME_API_GDX;User Id=SME_GDX;Password=tGxx5434&;TrustServerCertificate=True;");
+//        => optionsBuilder.UseSqlServer("Server=192.168.9.155;Database=bluecarg_SME_API_GDX;User Id=sa;Password=Osmep@2025;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.HasDefaultSchema("SME_GDX");
+        modelBuilder.UseCollation("Thai_CI_AS");
 
         modelBuilder.Entity<MApiInformation>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_MApiInformation");
 
-            entity.ToTable("M_ApiInformation");
+            entity.ToTable("M_ApiInformation", "SME_GDX");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.AccessToken).HasColumnName("accessToken");
@@ -63,7 +63,7 @@ public partial class GDXDBContext : DbContext
         {
             entity.HasKey(e => e.OrganizationJuristicId).HasName("PK__M_Organi__6E20652EF94B9040");
 
-            entity.ToTable("M_OrganizationJuristicPerson");
+            entity.ToTable("M_OrganizationJuristicPerson", "SME_GDX");
 
             entity.Property(e => e.OrganizationJuristicId)
                 .HasMaxLength(20)
@@ -92,7 +92,7 @@ public partial class GDXDBContext : DbContext
 
         modelBuilder.Entity<MScheduledJob>(entity =>
         {
-            entity.ToTable("M_ScheduledJobs");
+            entity.ToTable("M_ScheduledJobs", "SME_GDX");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.JobName).HasMaxLength(150);
@@ -102,7 +102,7 @@ public partial class GDXDBContext : DbContext
         {
             entity.HasKey(e => e.ObjectiveId).HasName("PK__T_Jurist__8C56338DD89D717F");
 
-            entity.ToTable("T_JuristicObjective");
+            entity.ToTable("T_JuristicObjective", "SME_GDX");
 
             entity.Property(e => e.ObjectiveId).HasColumnName("ObjectiveID");
             entity.Property(e => e.JuristicObjective)
@@ -129,7 +129,7 @@ public partial class GDXDBContext : DbContext
         {
             entity.HasKey(e => e.PersonListId).HasName("PK__T_Jurist__F6A30F1D4D3E0D9C");
 
-            entity.ToTable("T_JuristicPersonList");
+            entity.ToTable("T_JuristicPersonList", "SME_GDX");
 
             entity.Property(e => e.PersonListId).HasColumnName("PersonListID");
             entity.Property(e => e.JuristicPersonInvestAmount).HasColumnType("decimal(18, 2)");
@@ -160,7 +160,7 @@ public partial class GDXDBContext : DbContext
         {
             entity.HasKey(e => e.AddressId).HasName("PK__T_Organi__091C2A1BE3E2BE5B");
 
-            entity.ToTable("T_OrganizationJuristicAddress");
+            entity.ToTable("T_OrganizationJuristicAddress", "SME_GDX");
 
             entity.Property(e => e.AddressId).HasColumnName("AddressID");
             entity.Property(e => e.Address).HasMaxLength(255);
@@ -199,7 +199,7 @@ public partial class GDXDBContext : DbContext
         {
             entity.HasKey(e => e.DescriptionId).HasName("PK__T_Organi__A58A9FEBD14867E9");
 
-            entity.ToTable("T_OrganizationJuristicPersonDescription");
+            entity.ToTable("T_OrganizationJuristicPersonDescription", "SME_GDX");
 
             entity.Property(e => e.DescriptionId).HasColumnName("DescriptionID");
             entity.Property(e => e.DescriptionType).HasMaxLength(255);

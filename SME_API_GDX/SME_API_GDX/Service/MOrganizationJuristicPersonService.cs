@@ -97,13 +97,51 @@ public class MOrganizationJuristicPersonService
                 UpdateDate = x.UpdateDate,
                 Bearer = x.Bearer,
                 AccessToken = x.AccessToken
+                ,AgentId =x.AgentId,
+                ConsumerKey =x.ConsumerKey,
+                ConsumerSecret =x.ConsumerSecret,
+                Token =x.Token,
 
             }).FirstOrDefault(); // Use FirstOrDefault to handle empty lists
 
-            var apiResponse = await _serviceApi.GetDataApiAsync(apiParam, xmodel);
-            var result = JsonSerializer.Deserialize<JuristicPersonApiResponse>(apiResponse, options);
+            try
+            {
+                var apiResponse = await _serviceApi.GetDataApiAsync(apiParam, xmodel);
 
-            JuristicPersonApiResponse = result ?? new JuristicPersonApiResponse();
+                // Manually parse the JSON if the structure does not match the model
+                var root = Newtonsoft.Json.Linq.JObject.Parse(apiResponse);
+
+                var statusObj = root["status"];
+                var status = new Status
+                {
+                    code = statusObj?["code"]?.ToString(),
+                    description = statusObj?["description"]?.ToString()
+                };
+
+                var orgJuristicPersonToken = root["data"]?["cd:OrganizationJuristicPerson"];
+                var orgJuristicPerson = orgJuristicPersonToken != null
+                    ? orgJuristicPersonToken.ToObject<OrganizationJuristicPersonDto>()
+                    : null;
+
+                JuristicPersonApiResponse = new JuristicPersonApiResponse
+                {
+                    status = status,
+                    data = orgJuristicPerson != null
+                        ? new List<OrganizationJuristicPersonWrapper>
+                            {
+                    new OrganizationJuristicPersonWrapper
+                    {
+                        OrganizationJuristicPerson = orgJuristicPerson
+                    }
+                            }
+                        : new List<OrganizationJuristicPersonWrapper>()
+                };
+            }
+            catch (Exception ex)
+            {
+                // Handle error
+            }
+
         }
 
         if (JuristicPersonApiResponse.data != null && JuristicPersonApiResponse.data.Any())
