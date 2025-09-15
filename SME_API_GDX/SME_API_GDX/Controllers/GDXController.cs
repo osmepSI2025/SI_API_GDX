@@ -29,10 +29,6 @@ namespace SME_API_GDX.Controllers
             return Content(json, "application/json");
         }
 
-        //public async Task<IActionResult> getJuristicPerson(searchMOrganizationJuristicPersonModels models)
-        //{
-        //    var result = await _organizationJuristicPersonService.GetAllAsyncSearch_JuristicPerson(models);
-        //    return Ok(result);
-        //}
+   
     }
 }

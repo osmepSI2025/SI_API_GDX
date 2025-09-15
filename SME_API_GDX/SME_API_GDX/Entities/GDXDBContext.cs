@@ -29,10 +29,6 @@ public partial class GDXDBContext : DbContext
 
     public virtual DbSet<TOrganizationJuristicPersonDescription> TOrganizationJuristicPersonDescriptions { get; set; }
 
-//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-//        => optionsBuilder.UseSqlServer("Server=192.168.9.155;Database=bluecarg_SME_API_GDX;User Id=sa;Password=Osmep@2025;TrustServerCertificate=True;");
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.UseCollation("Thai_CI_AS");
